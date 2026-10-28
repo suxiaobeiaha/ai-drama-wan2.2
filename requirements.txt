@@ -1,0 +1,4 @@
+imageio
+imageio-ffmpeg
+edge-tts
+pillow

@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+settings.json
+stories/
+assets/
+clips/
+audio/
+output/
+*.mp4
+*.webp
+*.safetensors
+ab_compare/
+实验/
+对比测试集/
+.venv/

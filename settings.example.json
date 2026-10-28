@@ -1,0 +1,57 @@
+{
+  "_说明": "流水线全局设置。改完直接重跑对应阶段即可,无需改代码。",
+  "模型": {
+    "主线模型": "qwen3.6:iq4xs",
+    "快写模型": "lumen:14b",
+    "_说明": "主线=重写润色/关键段;快写=方向/梗概/草稿"
+  },
+  "编剧": {
+    "镜头数下限": 8,
+    "镜头数上限": 12,
+    "改编方向数": 3,
+    "启用27B润色": true,
+    "_说明": "润色=每镜草稿后再用主线模型精修,约每镜多1分钟,质量更高"
+  },
+  "画面定调": {
+    "风格": "二次元3D渲染",
+    "_风格备选": "真人电影 / 韩漫 / 日漫 / 国漫水墨 / 3A游戏CG厚涂",
+    "摄影机": "ARRI Alexa 65 大画幅摄影机质感",
+    "镜头": "50mm 中焦定焦镜头, f/2.8 浅景深",
+    "胶片": "柯达5219电影胶片, 细腻自然颗粒",
+    "_说明": "风格为漫剧时摄影机/胶片参数会被风格描述覆盖(见提示词模板.md)",
+    "_风格说明": "anime style, 3d rendered characters, cel shading, vibrant colors, beautiful detailed face, medieval European knight era, plate armor, war banners, castle",
+    "使用水墨LoRA": false
+  },
+  "视频": {
+    "宽度": 1280,
+    "高度": 544,
+    "帧数": 121,
+    "帧率": 24,
+    "步数": 20,
+    "CFG": 5.0,
+    "种子基数": 1000,
+    "_说明": "1280x544 ≈ 2.35:1 宽银幕(2.39:1 的最接近合法值,宽高须为32的倍数);121帧≈5秒是模型上限;想更快改 960x416 / 81帧"
+  },
+  "配音": {
+    "启用旁白": true,
+    "引擎": "edge-tts",
+    "音色": "zh-CN-XiaoxiaoNeural",
+    "语速偏移": 0,
+    "_音色备选": "zh-CN-YunxiNeural(阳光男) / zh-CN-YunjianNeural(反派男) / zh-CN-XiaoyiNeural(活泼女) / zh-CN-liaoning-XiaobeiNeural(东北话)",
+    "_说明": "edge-tts 微软神经音色,旁白带[情绪]标签自动映射语速音调;语速偏移为百分比,如 10 = 所有情绪基础上再快10%"
+  },
+  "输出": {
+    "输出目录": "E:\\ai\\ComfyUI_windows_portable\\ComfyUI\\output",
+    "成片文件名": "final_story.mp4"
+  },
+  "当前故事": "铁线河的绝唱",
+  "视频引擎": "jimeng",
+  "即梦": {
+    "api_key": "在此填入你的火山方舟APIKey",
+    "model": "doubao-seedance-2-0-fast-260128",
+    "resolution": "720p",
+    "duration": 5,
+    "_说明": "视频引擎=comfyui(本地Wan)或jimeng(即梦API);api_key从火山方舟控制台创建;model备选doubao-seedance-2-5-260628(4-30秒)/doubao-seedance-2-0-fast-260128(快速版)",
+    "ratio": "16:9"
+  }
+}
