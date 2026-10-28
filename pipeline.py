@@ -880,11 +880,11 @@ def stage_concat():
 
 
 # ---------- 服务器生命周期管理(LLM 和视频生成不能同时占 GPU) ----------
-OLLAMA_EXE = r"C:\Users\zeyu.qiu\AppData\Local\Programs\Ollama\ollama.exe"
+OLLAMA_EXE = r"C:\Users\<你的Windows用户名>\AppData\Local\Programs\Ollama\ollama.exe"
 OLLAMA_ENV = {
     "OLLAMA_MODELS": r"F:\ollama",
     "ROCBLAS_USE_HIPBLASLT": "0",
-    "ROCBLAS_TENSILE_LIBPATH": r"C:\Users\zeyu.qiu\AppData\Local\Programs\Ollama\lib\ollama\rocm_v7_1\rocblas\library",
+    "ROCBLAS_TENSILE_LIBPATH": r"C:\Users\<你的Windows用户名>\AppData\Local\Programs\Ollama\lib\ollama\rocm_v7_1\rocblas\library",
 }
 
 
